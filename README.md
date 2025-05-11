@@ -32,7 +32,7 @@ ros2_virtual_sensor_stack/
 ├── README.md    
 ```
 
-### 🧠 VIO Estimator Node (20250511 Update)
+### VIO Estimator Node (20250511 Update)
 - Estimates robot pose based on:
   - Optical flow (OpenCV LK tracker)
   - Angular velocity (IMU z-axis integration)
