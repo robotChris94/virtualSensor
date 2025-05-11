@@ -28,4 +28,12 @@ def generate_launch_description():
             executable='rviz2_visualizer',
             name='imu_visualizer'
         ),
+        
+        # VIO mode, after all neccessary nodes on
+        Node(
+            package='virtual_sensor_stack',
+            executable='vio_estimator_node',
+            name='vio_estimator',
+            output='screen'
+        ),
     ])

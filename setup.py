@@ -20,6 +20,8 @@ setup(
             'virtual_camera_node = virtual_sensor_stack.virtual_camera_node:main',
             'virtual_imu_node = virtual_sensor_stack.virtual_imu_node:main',
             'rviz2_visualizer = virtual_sensor_stack.rviz2_visualizer:main',
-        ],
+            'tf_broadcaster_node = virtual_sensor_stack.tf_broadcaster_node:main',
+            'vio_estimator_node = virtual_sensor_stack.vio_estimator_node:main',
+        ]
     },
 )
