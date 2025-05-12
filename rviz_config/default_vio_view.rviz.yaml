@@ -5,8 +5,11 @@ Panels:
     Name: Time
   - Class: rviz_common/Views
     Name: Views
+
 Visualization Manager:
   Class: ""
+  Global Options:
+    Fixed Frame: world
   Displays:
     - Class: rviz_default_plugins/TF
       Name: TF
@@ -27,8 +30,15 @@ Visualization Manager:
       Shaft Length: 0.5
       Head Length: 0.1
       Shaft Radius: 0.02
-  Global Options:
-    Fixed Frame: world
+    - Class: rviz_default_plugins/Imu
+      Name: IMU
+      Enabled: true
+      Topic: /imu/data
+      Frame: imu_link
+      Queue Size: 10
+      Alpha: 1.0
+      Acceleration Color: 255; 0; 0
+      Angular Velocity Color: 0; 0; 255
   Tools:
     - Class: rviz_default_plugins/Interact
     - Class: rviz_default_plugins/MoveCamera

@@ -2,6 +2,8 @@ from launch import LaunchDescription
 from launch_ros.actions import Node
 from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration
+from launch.conditions import IfCondition
+
 
 def generate_launch_description():
     use_imu = LaunchConfiguration('use_imu')
@@ -27,6 +29,12 @@ def generate_launch_description():
             package='virtual_sensor_stack',
             executable='rviz2_visualizer',
             name='imu_visualizer'
+        ),
+
+        Node(
+            package='virtual_sensor_stack',
+            executable='tf_broadcaster_node',
+            name='static_tf_broadcaster'
         ),
         
         # VIO mode, after all neccessary nodes on

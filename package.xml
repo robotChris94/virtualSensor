@@ -1,5 +1,5 @@
 <package format="3">
-  <name>virtual_sensors</name>
+  <name>virtual_sensor_stack</name>
   <version>0.0.1</version>
   <description>Virtual camera and IMU ROS2 nodes</description>
   <maintainer email="you@example.com">Your Name</maintainer>
